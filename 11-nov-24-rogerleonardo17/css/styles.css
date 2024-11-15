@@ -1,0 +1,35 @@
+/* ini css */
+.main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-article{
+    display: flex;
+    justify-content: space-around;
+}
+
+.-main-logo{
+    display: flex;
+}
+
+.container-banner{
+    display: flex;
+    justify-content: center;
+}
+
+.main-article-header{
+    text-align: center;
+}
+
+.main-article-header h1{
+    text-align: center;
+}
+
+.our-package-header{
+    text-align: center;
+}
+
+.our-package-content{
+    text-align: center;
+}
