@@ -1,7 +1,21 @@
 /* ini css */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header, main {
+    margin: 0;
+}
+
 .main-header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-article{
@@ -10,13 +24,109 @@
 }
 
 .container-banner{
-    flex: 1;
+    width: 50%;
+    margin-bottom: 20px;
 }
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.profile-icon {
+    font-size: 50px; 
+    color: #010101; 
+}
+
+.profile-text {
+    line-height: 1.4; /* Spasi antar baris */
+}
+.profile-text .name {
+    font-size: 1.2rem;
+    font-weight: bold; /* Nama dicetak tebal */
+}
+.profile-text .job {
+    font-size: 1rem;
+    color: #666; /* Warna abu-abu untuk pekerjaan */
+    font-style: italic;
+}
+
+.short-line {
+    width: 50px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: #000000; /* Warna garis */
+    margin: 10px 200px;
+}
+
+#contactForm {
+    width: 300px;
+    height: 370px;
+    margin: auto;
+    padding: 20px;
+    padding-right: 35px;
+    background-color: #f7f9fc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#contactForm h2 {
+    text-align: left;
+}
+
+#contactForm p{
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #464646;
+}
+
+#contactForm label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contactForm input, select, button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactForm button {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+#contactForm button:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.circle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Ukuran lingkaran */
+    height: 50px;
+    background-color: #4f4f4f; /* Warna lingkaran */
+    color: white; /* Warna angka */
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    font-size: 24px; /* Ukuran angka */
+    margin: 10px; /* Jarak antar ikon */
+  }
+  
 
 .main-logo{
     height: 75px;
     width: 75px;
-    background-image: url(../logotravel.png);
+    background-image: url(../img/logotravel.png);
     background-position: center;
     border-radius: 50%;
 }
@@ -43,19 +153,105 @@ header, main{
 
 .banner-autoslide{
     height: 250px;
-    background-image: url(../banner1.jpg);
+    background-image: url(../img/banner1.jpg);
     background-position: center;
     background-size: cover;
+    transition: background-image 1s linear;
 }
 
-.our-package-header{
+.package{
+    margin-top: 20px;
+    flex: 1 1 30%; /* Take up 30% width, and ensure wrapping */
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional: add border for visibility */
+}
+
+.our-package-header {
     text-align: center;
+    background-color: black;
+    color: white;
+    width: calc(100% + 64px); /* Tambahkan 32px margin dari elemen induk */
+    margin: 0 -32px; /* Tarik elemen keluar dari margin */
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 .our-package-content{
+    margin-left: 120px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust space between items */
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+
+.package-container{
+    display: flex;
+    align-items: normal;
+    margin-left: 80px;
+    gap: 10px; /* Jarak antara ikon dan teks */
+}
+
+.call-action{
+    margin-top: 70px;
     text-align: center;
+    border-top: #000000 1px solid;
+    border-bottom: #000000 1px solid;
+    padding: 20px;
+    background-color: #f7f9fc;
+    width: calc(100% + 64px); /* Tambahkan 32px margin dari elemen induk */
+    margin: 0 -32px; /* Tarik elemen keluar dari margin */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.call-action-header{
+    margin-top: 50px;
+}
+
+#callActionBtn{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 50px;
 }
 
 footer{
+    background-color: #4f4f4f;
+    color: white;
     text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center;
+    gap: 20px;
+}
+.footer-container img {
+    width: 30px; /* Ukuran logo */
+    height: 30px;
+    object-fit: contain;
+}
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.made-by {
+    font-size: 1rem;
 }
