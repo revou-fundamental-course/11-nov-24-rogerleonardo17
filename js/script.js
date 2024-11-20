@@ -3,9 +3,9 @@
 
 // Array of banner images
 const bannerImages = [
-    '../img/banner1.jpg',
-    '../img/banner2.jpg',
-    '../img/banner3.jpg'
+    './img/banner1.jpg',
+    './img/banner2.jpg',
+    './img/banner3.jpg'
 ];
 
 // Get the banner element
