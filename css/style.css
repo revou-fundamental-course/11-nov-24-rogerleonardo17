@@ -265,87 +265,109 @@ footer{
     font-size: 1rem;
 }
 
-/* Extra Large Screens (Desktops, >1200px) */
-@media (min-width: 1200px) {
-    .container {
-        display: flex;
-        gap: 20px;
-    }
-}
-
-/* Large Screens (Laptops, 992px - 1200px) */
-@media (max-width: 1200px) {
-    header {
-        padding: 15px;
-    }
-
-    .container {
-        flex-direction: column;
-        padding: 15px;
-    }
-}
-
-/* Medium Screens (Tablets, 768px - 992px) */
-@media (max-width: 992px) {
-    .navbar {
+/* Media query untuk perangkat dengan lebar maksimal 1024px (tablet landscape) */
+@media screen and (max-width: 1024px) {
+    .main-header {
         flex-direction: column;
         align-items: center;
     }
 
-    .sidebar {
-        width: 200px;
-    }
-
-    .main-content {
-        padding: 15px;
-    }
-}
-
-/* Small Screens (Phones, 576px - 768px) */
-@media (max-width: 768px) {
-    header {
+    .nav {
         flex-direction: column;
-        text-align: center;
-        padding: 10px;
+        align-items: center;
     }
 
     .navbar {
+        margin: 5px 0;
+    }
+
+    .main-article {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    .sidebar {
-        display: none; /* Hide sidebar on small screens */
+    .container-banner {
+        width: 90%; /* Kurangi lebar untuk layar kecil */
     }
 
-    .container {
-        padding: 10px;
-    }
-
-    .main-content {
-        padding: 10px;
+    .package {
+        flex: 1 1 45%; /* Tampilkan 2 kolom untuk ukuran ini */
     }
 }
 
-/* Extra Small Screens (Small Phones, <576px) */
-@media (max-width: 576px) {
-    body {
-        font-size: 14px; /* Adjust font size for readability */
+/* Media query untuk perangkat dengan lebar maksimal 768px (tablet portrait) */
+@media screen and (max-width: 768px) {
+    .main-logo {
+        height: 70px;
+        width: 70px;
     }
 
-    header {
-        padding: 5px;
+    .banner-autoslide {
+        height: 200px;
     }
 
-    .navbar a {
+    .package {
+        flex: 1 1 90%; /* Satu kolom pada ukuran ini */
+    }
+
+    .short-line {
+        margin: 40px auto; /* Tengahkan garis */
+    }
+
+    .our-package-header {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .our-package-content {
+        margin-left: 30px; /* Sesuaikan margin untuk layar kecil */
+    }
+
+    #contactForm {
+        width: 90%; /* Kurangi lebar form */
+        padding-right: 45px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Media query untuk perangkat dengan lebar maksimal 480px (smartphone) */
+@media screen and (max-width: 480px) {
+    .main-header {
+        text-align: center;
+    }
+
+    .navbar {
         font-size: 14px;
+        padding: 8px;
     }
 
-    img {
-        border-radius: 5px;
+    .container-banner {
+        width: 100%; /* Maksimalkan lebar pada layar kecil */
     }
 
-    .container {
-        padding: 5px;
+    .short-line {
+        margin: 40px auto; /* Tengahkan garis */
+    }
+
+    #contactForm {
+        width: 90%; /* Kurangi lebar form */
+        padding-right: 20px;
+        margin-bottom: 40px;
+    }
+
+    #contactForm input, #contactForm select, #contactForm button {
+        width: 100%; /* Maksimalkan lebar elemen form */
+    }
+
+    .call-action {
+        padding: 10px;
+    }
+
+    .call-action-header {
+        font-size: 1.5rem;
+    }
+
+    .our-package-content {
+        margin-left: 20px; /* Margin lebih kecil untuk layar sangat kecil */
     }
 }
