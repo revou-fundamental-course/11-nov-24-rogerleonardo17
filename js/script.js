@@ -59,7 +59,7 @@ document.getElementById('submitBtn').addEventListener('click', function(event) {
     // Validate interest
     if (interest === '') {
         valid = false;
-        errorMessage += 'Please select your area of interest.\n';
+        errorMessage += 'Please select your travel destination of interest.\n';
     }
 
     // If form is invalid, display error messages
