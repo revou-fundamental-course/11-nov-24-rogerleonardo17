@@ -22,8 +22,8 @@ function changeBannerImage() {
     currentIndex = (currentIndex + 1) % bannerImages.length;
 }
 
-// Change the background image every 3 seconds
-setInterval(changeBannerImage, 3000);
+// Change the background image every 5 seconds
+setInterval(changeBannerImage, 5000);
 
 // Initialize the first banner image
 changeBannerImage();
